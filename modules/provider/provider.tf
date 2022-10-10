@@ -7,13 +7,23 @@ variable "aws_profile" {}
 provider "aws" {
     region = var.aws_region
     profile = var.aws_profile
-    version = "~> 2.49"
-}
 
+  #  default_tags{
+  #    tags = {
+  #      Env = "prod"
+  #      System = "mayblog"
+  #    }
+  #  }
+}
 
 ###############
 ## TF Version ##
 ###############
 terraform {
-  required_version = ">= 0.12.5"
+  required_providers{
+    aws = {
+      source = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
 }

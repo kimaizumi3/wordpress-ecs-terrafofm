@@ -1,0 +1,17 @@
+--wordpress
+   -- environments/
+      -- dev/
+         -- main.tf
+         -- locals.tf
+         -- outputs.tf
+      -- prod/
+         -- main.tf
+         -- ...
+   -- modules/
+      -- <service-name>/
+         -- main.tf
+         -- variables.tf
+         -- outputs.tf
+         -- ecr.tf
+         -- provider.tf
+       -- ...other…--main
